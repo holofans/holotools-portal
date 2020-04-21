@@ -9,6 +9,16 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/watch*",
+        "*://youtube.com/watch*"
+      ],
+      "js": ["inject-button.js"],
+      "run_at": "document_end"
+    }
+  ],
   "browser_action": {
     "default_icon": {
       "16": "images/icon16.png",
